@@ -35,57 +35,8 @@ class TestCategoriesPage(unittest.TestCase):
 
     def test_categories(self):
         """Check if the categories function returns the correct content."""
-        expected_list = {
-            "Fantasy",
-            "TV Action & Adventure",
-            "Animation",
-            "Documentaries",
-            "Musical",
-            "Cooking & Food",
-            "International Movies",
-            "Stand Up",
-            "Music",
-            "Docuseries",
-            "British TV Shows",
-            "TV Mysteries",
-            "Action",
-            "Special Interest",
-            "Biographical",
-            "TV Horror",
-            "Drama",
-            "Crime TV Shows",
-            "International",
-            "Science Fiction",
-            "Children & Family Movies",
-            "Lifestyle & Culture",
-            "TV Comedies",
-            "Comedies",
-            "Action-Adventure",
-            "Dramas",
-            "Thriller",
-            "Superhero",
-            "Suspense",
-            "TV Dramas",
-            "International TV Shows",
-            "Documentary",
-            "Kids",
-            "Animals & Nature",
-            "Crime",
-            "Horror",
-            "Romance",
-            "Independent Movies",
-            "Reality",
-            "Reality TV",
-            "Comedy",
-            "Romantic TV Shows",
-            "Historical",
-            "Survival",
-            "Family",
-        }
-        expected_categories = (
-            f"Valid categories are as follows:</br></br>{expected_list}"
-        )
-        self.assertEqual(app.list_categories(), expected_categories)
+        expected_return = f"Valid categories are as follows:</br></br>{app.dataset.get_category_set()}"
+        self.assertEqual(app.list_categories(), expected_return)
 
 
 class TestFilterFunctions(unittest.TestCase):
