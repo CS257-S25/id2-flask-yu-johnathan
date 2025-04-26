@@ -188,7 +188,7 @@ class TestErrorHandling(unittest.TestCase):
 
     def test_500_error(self):
         """Check if the 500 error handler returns the correct content."""
-        expected_error = "Error 500 - A python bug has occurred.<br><br>"
+        expected_error = "Error 500 - A python bug has occurred.</br></br>"
         self.assertEqual(app.python_bug(None), expected_error)
 
 
