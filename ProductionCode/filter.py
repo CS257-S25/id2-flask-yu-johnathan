@@ -86,7 +86,7 @@ class Filter:
         """
         titles = ""
         for media in self.filtered_media_dict.values():
-            titles += f"{media.title}<br/>"
+            titles += f"{media.title}</br>"
         return titles
 
     def print_filtered_all(self):

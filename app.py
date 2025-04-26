@@ -52,6 +52,7 @@ def page_not_found(e):
     Determines the text displayed on an unspecified route.
     Provides an error message and detailed instructions regarding proper use.
     """
+    print(e)
     return "Error 404 - Incorrect format.</br></br>" \
     "To use this website, please insert the following into the address: /actor/category/year</br>" \
     "actor: The name of an actor to search for in a movie/show's cast.</br>" \
@@ -69,7 +70,8 @@ def python_bug(e):
     Determines the text displayed if the program encounters a python bug.
     Provides an error message.
     """
-    return "Error 500 - A python bug has occurred.<br><br>" \
+    print(e)
+    return "Error 500 - A python bug has occurred.</br></br>" \
     "Please check your input and try again."   
 
 if __name__ == '__main__':

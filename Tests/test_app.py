@@ -173,7 +173,8 @@ class TestErrorHandling(unittest.TestCase):
         """Check if the 404 error handler returns the correct content."""
         expected_error = (
             "Error 404 - Incorrect format.</br></br>"
-            "To use this website, please insert the following into the address: /actor/category/year</br>"
+            "To use this website, please insert the following into the address: "
+            "/actor/category/year</br>"
             "actor: The name of an actor to search for in a movie/show's cast.</br>"
             "category: The category of movie/show to search for.</br>"
             "year: The results will only include moves released on or after this year.</br></br>"
