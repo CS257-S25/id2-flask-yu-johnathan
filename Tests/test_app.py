@@ -35,7 +35,8 @@ class TestCategoriesPage(unittest.TestCase):
 
     def test_categories(self):
         """Check if the categories function returns the correct content."""
-        expected_return = f"Valid categories are as follows:</br></br>{app.dataset.get_category_set()}"
+        expected_list = app.filters.dataset.get_category_set()
+        expected_return = f"Valid categories are as follows:</br></br>{expected_list}"
         self.assertEqual(app.list_categories(), expected_return)
 
 
